@@ -258,7 +258,7 @@ namespace Fundacion.Controllers
         public async Task<ActionResult<List<Proyecto>>> GetConsulta()
         {
 
-            //Holaa
+            
             var proyecto = await _context.Proyectos.Include(x => x.AreasxProyectos).Include(x => x.EquipoXproyectos).ToListAsync();
 
             return proyecto;
